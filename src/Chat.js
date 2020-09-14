@@ -150,7 +150,7 @@ function Chat() {
 
            <div className="chat_container_chatBox_outermessage chat_reciever">
            <h6>NAme</h6>
-                 
+                    
                <div className="chat_container_chatBox_message ">
                 <p>whta the fuck</p>
                 <span>{new Date().toLocaleTimeString()}</span>
