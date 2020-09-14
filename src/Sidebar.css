@@ -1,0 +1,72 @@
+.sidebar{
+    flex:0.35;
+    border-right:2px rgb(215,214,209) solid;
+    background-color:rgb(247,245,247);
+    height:100%;
+    display: flex;
+    min-width:250px;
+    flex-direction: column;
+}
+.sidebar_header{
+    flex:.15;
+    background-color: rgb(237,236,237);
+    display: flex;
+justify-content: space-between;
+align-items: center;
+
+}
+
+.sidebar_Avatar{
+margin:2%;
+}
+
+.sidebar_header > .header_options{
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    color:gray;
+
+}
+.sidebar_input{
+    background-color: rgb(247,245,247);
+ 
+    flex:.05;
+    padding:2%;
+    display: flex;
+}
+.sidebar_input > input{
+flex:0.99;
+border-radius:0px 30px 30px 0px;
+outline:none;
+border:none;
+}
+.sidebar_input > .slidebar_iconSearch{
+   
+    color:white;
+    background-color: white;
+    border-radius:30px 0px 0px 30px;
+}
+
+
+
+
+.sidebar_contacts{
+    background-color:white;
+    flex:0.8;
+    box-shadow: 0 0 1px ;
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column;
+    margin:2%;
+    overflow:scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.sidebar_contacts::-webkit-scrollbar{
+    display: none;
+}
+
+ .contactList{
+height: 20%;
+background-color: red;
+}

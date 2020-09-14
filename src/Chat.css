@@ -1,0 +1,136 @@
+.chat_container{
+    flex:0.65;
+    display: flex;
+    flex-direction:column;
+ 
+    height:100%;
+  BACKGROUND-COLOR:rgb(237,236,237);
+  background-color:rgb(237,236,237);
+}
+
+.chat_container_header{
+    flex:0.135;
+    
+    background-color: rgb(237,236,237);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.chat_container_header_avatar{
+    margin-left:1%;
+   
+}
+.chat_container_header_details > h3{
+    margin:0px;
+   
+}
+.chat_container_header_details >p{
+    margin:0px;
+  color:rgb(109,108,109);
+}
+.chat_container_header_options{
+  
+    color:rgb(109,108,109);
+}
+
+
+
+.chat_container_chatBox{
+    flex:0.765;
+display: flex;
+flex-direction: column;
+
+overflow-y:scroll;
+    background-color:rgb(226,216,208);
+ 
+}
+.chat_container_chatBox::-webkit-scrollbar{
+    display: none;
+}
+.chat_container_chatBox_outermessage{
+  
+    display: flex;
+width:fit-content;
+    flex-direction: column;
+    height:13% ;
+    margin: 4px;
+    justify-content: space-around;
+ 
+}
+.chat_container_chatBox_outermessage >h6{
+    margin:0px;
+    align-self: flex-start;
+    position: relative;
+    left:5%;
+
+}
+.chat_container_chatBox_message{
+    background-color: white;
+display:flex;
+
+
+flex-direction: row;
+
+justify-content: center;
+position: relative;
+box-shadow: 0 0 8px ;
+border-radius:10px;
+justify-content: center;
+align-items: center;
+margin:3%;
+margin-top: 0px;
+width: max-content;
+}
+.chat_container_chatBox_message >p{
+    margin:3px;
+
+    text-justify: auto;
+
+    font-family: sans-serif;
+    font-size: small;
+   text-align: center;
+  
+}
+.chat_container_chatBox_message > span{
+    font-size:xx-small;
+    margin:3px;
+}
+
+
+
+
+
+.chat_container_input{
+    flex:0.1;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(237,236,237);
+ 
+    align-items: center;
+}
+.chat_container_input >form{
+flex:1;
+height: 70%;
+}
+.chat_container_input > form >input{
+
+    width:80%;
+    border-radius:30px 30px 30px 30px;
+    height: 100%;
+    
+    outline:none;
+    border:none;
+}
+
+
+
+.chat_reciever{
+    align-self: flex-end;
+    margin-right: 2%;
+
+}
+.chat_reciever > .chat_container_chatBox_message {
+background-color: rgb(220,247,194);
+}

@@ -1,0 +1,33 @@
+.slidebar_contacts_contact{
+    display: flex;
+    flex-direction: row;
+margin-bottom: 6%;
+
+border-top:1px rgb(220,220,150) dotted;
+
+height:15%;
+
+}
+.slidebar_contacts_contact_avatar{
+   
+    display: flex;
+    margin-left: 3%;
+    align-items: center;
+   justify-content: center;
+    flex:0.1;
+}
+.slidebar_contacts_contact_box{
+  
+    display: flex;
+    flex-direction: column;
+    margin-left: 4%;
+    align-items: flex-start;
+    flex:0.9;
+}
+.slidebar_contacts_contact_box >h2{
+    margin:0px;
+}
+.slidebar_contacts_contact_box > p{
+    margin: 0px;
+    margin-top:-2%;
+}
