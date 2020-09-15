@@ -7,7 +7,21 @@ import IconButton from '@material-ui/core/IconButton';
 import MicIcon from '@material-ui/icons/Mic';
 import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
 import './Chat.css'
-function Chat() {
+import  { useState, useEffect } from 'react';
+import axios from './axios';
+function Chat({messages}) {
+    const[input,setInput]=useState("");
+    const sendMessage =async function(event){
+        event.preventDefault();
+        await axios.post('http://localhost:9000/messages/new',{
+            message:input,
+            name:"demo",
+            timestamp:"Just now",
+            received:false
+        });
+        setInput('');
+    }
+
     return (
         <div className="chat_container">
            <div className="chat_container_header">
@@ -37,16 +51,24 @@ function Chat() {
            <div className="chat_container_chatBox">
 
 
+{   messages.map((message)=>(
 
-                   <div className="chat_container_chatBox_outermessage">
-           <h6>NAme</h6>
-                 
-               <div className="chat_container_chatBox_message">
-                <p>heysadsadasdsadsadasdde</p>
-                <span>{new Date().toLocaleTimeString()}</span>
-                  
-           </div>
-           </div>
+
+<div className={ `chat_container_chatBox_outermessage  ${message.received && "chat_reciever"}`}>
+<h6>{message.name}</h6>
+      
+    <div className="chat_container_chatBox_message">
+<p>{message.message}</p>cscs
+<span>{message.timestamp}</span>
+       
+</div>
+</div>
+
+
+
+
+
+))}
 
             
            <div className="chat_container_chatBox_outermessage">
@@ -164,8 +186,8 @@ function Chat() {
 < MicIcon />
 </IconButton>
 <form>
-<input placeholder="Type something..."/>
-<Button type="submit">Send</Button>
+<input value={input} onChange={e=>setInput(e.target.value)} placeholder="Type something..."/>
+<Button type="submit" onClick={sendMessage}>Send</Button>
 </form>
 
 <IconButton><InsertEmoticonIcon/>
