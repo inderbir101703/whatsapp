@@ -1,12 +1,21 @@
 const Message=require('../models/message');
 module.exports.home=function(req,res){
-  console.log(req.query.id);
+
+return res.redirect('http://localhost:3000/');
   return  res.status(200).json({
       data:"data is with us" ,
-      message:"the mesaage"
+      message:"the mesaage" ,
+      gobo:req.user
   })
 }
 
+module.exports.home2=function(req,res){
+  if(req.isAuthenticated())
+  {
+   return  res.redirect('https://www.google.com/');
+  }
+ 
+  return res.send(req.user);}
 module.exports.createMessage=function(req,res){
   
 
@@ -27,7 +36,7 @@ module.exports.createMessage=function(req,res){
 
 
 module.exports.showThem=function(req,res){
-  console.log('i am hfghfgin here');
+ 
  
   Message.find({},function(err,post){
 if(err)
@@ -38,3 +47,7 @@ return res.status(200).json(post);
   })
 
 }
+
+
+
+

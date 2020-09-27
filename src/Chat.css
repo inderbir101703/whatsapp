@@ -54,8 +54,8 @@ overflow-y:scroll;
     display: flex;
 width:fit-content;
     flex-direction: column;
-    height:13% ;
-    margin: 4px;
+    height:40px ;
+    margin: 2px;
     justify-content: space-around;
  
 }
@@ -64,6 +64,7 @@ width:fit-content;
     align-self: flex-start;
     position: relative;
     left:5%;
+    top:1px;
 
 }
 .chat_container_chatBox_message{

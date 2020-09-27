@@ -9,13 +9,18 @@ import OutlinedInput from '@material-ui/core/OutlinedInput';
 import SearchIcon from '@material-ui/icons/Search';
 import './Sidebar.css';
  
-function Sidebar() {
+function Sidebar({users ,data}) {
+    const url="http://localhost:9000/"+data;
     return (
         <div className="sidebar">
             
             <div className="sidebar_header">
                 <div className="sidebar_Avatar">
-                    <Avatar src="http://theworldclass.club/resume/image/my_image.jpg"/> </div>
+      
+                    
+                    <Avatar src={url}/> 
+               
+               </div>
                     <div className="header_options">
                         <IconButton>
          <DonutLargeIcon />
@@ -41,22 +46,32 @@ function Sidebar() {
                 <input placeholder="Type something"/>
              
             </div>
-
-
-
             <div className="sidebar_contacts">
-                       <h2> Add new Chat</h2>
-                       <Contact  className="contactList" />
-                       <Contact  className="contactList" />
-                       <Contact  className="contactList" />
-                       <Contact  className="contactList" />
-                       <Contact  className="contactList" />
-                       <Contact  className="contactList" />
-                       <Contact  className="contactList" />
-                       <Contact  className="contactList" />
-                       <Contact  className="contactList" />
-                       
-            </div>
+            <h2> All The Users</h2>
+
+{   users.map((User)=>(
+
+
+
+
+   
+<Contact  className="contactList" data={User}/>
+
+
+
+
+
+
+))}
+
+</div>
+
+
+
+
+
+
+         
           
         </div>
     )
